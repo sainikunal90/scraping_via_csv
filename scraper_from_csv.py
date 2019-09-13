@@ -10,7 +10,7 @@ df1 = df['url_key']
 x = np.array(df1) 
 
 for element in x:
-    paytm_source = requests.get(element).text
-    soup = BeautifulSoup(paytm_source, 'lxml')
-    paytm_price = soup.find('span', class_ = '_1V3w').text
-    print("Paytm Price:", paytm_price)
+    source = requests.get(element).text
+    soup = BeautifulSoup(source, 'lxml')
+    price = soup.find('span', class_ = '_1V3w').text
+    print("Price:", price)
